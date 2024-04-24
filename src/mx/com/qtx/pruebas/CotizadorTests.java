@@ -13,9 +13,10 @@ public class CotizadorTests {
 	private static void test_emisionCotizacion() {
 		Cotizador cotizador = new Cotizador();
 		
-		cotizador.agregarArticulo(Articulo.crearArticulo("TarjetaVideo","Nvdia", "Solaris", 800, 1600, "4Gb"), 7);
-		cotizador.agregarArticulo(Articulo.crearArticulo("Monitor","HP","Goliat",1600,3000,null), 5);
-		cotizador.agregarArticulo(Articulo.crearArticulo("Generico","Mouse Genius","X-25",120,250,null), 10);
+		cotizador.agregarArticulo(Articulo.crearArticulo("TarjetaVideo","Nvdia", "Solaris", 800, 1600, "4Gb",null), 7);
+		cotizador.agregarArticulo(Articulo.crearArticulo("Monitor","HP","Goliat",1600,3000, null, null), 5);
+		cotizador.agregarArticulo(Articulo.crearArticulo("Generico","Mouse Genius","X-25",120,250,null,null), 10);
+		cotizador.agregarArticulo(Articulo.crearArticulo("DiscoDuro", "SeaGate", "Saturn", 1100, 2000, null, "1Tb"), 5);
 		
 		cotizador.emitirCotizacion();
 	}

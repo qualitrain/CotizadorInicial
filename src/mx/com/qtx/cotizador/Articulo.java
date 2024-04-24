@@ -14,13 +14,17 @@ public class Articulo {
 		this.precioBase = precioBase;
 	}
 	
+	//Factory Method
 	public static Articulo crearArticulo(String tipo, String marca, String modelo, 
-			                             double costo, double precioBase, String memoria) {
+			                             double costo, double precioBase, String memoria, 
+			                             String almacenamiento) {
 		switch(tipo) {
 		case "TarjetaVideo":
 			return new TarjetaVideo(marca,modelo,costo,precioBase,memoria);
 		case "Monitor":
 			return new Monitor(marca,modelo,costo,precioBase);
+		case "DiscoDuro":
+			return new DiscoDuro(marca,modelo,costo,precioBase,almacenamiento);
 		case "Generico":
 			return new Articulo(marca,modelo,costo,precioBase);
 		}
