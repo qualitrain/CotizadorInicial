@@ -1,6 +1,7 @@
 package mx.com.qtx.cotizador;
 
 public class Monitor extends Articulo{
+	public static final boolean PROMOCION_ACTIVA = true;
 
 	public Monitor(String marca, String modelo, double costo, double precioBase) {
 		super(marca, modelo, costo, precioBase);
@@ -16,7 +17,10 @@ public class Monitor extends Articulo{
 
 	@Override
 	public double cotizar(int cantidad) {
-		return this.calcularPromocionDsctoXcantidad(cantidad);
+		if(PROMOCION_ACTIVA)
+			return this.calcularPromocionDsctoXcantidad(cantidad);
+		else
+			return super.cotizar(cantidad);
 	}
 
 }

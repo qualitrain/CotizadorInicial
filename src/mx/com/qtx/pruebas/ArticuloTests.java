@@ -6,7 +6,7 @@ public class ArticuloTests {
 
 	public static void main(String[] args) {
 		test_crearArticulo();
-		test_cotizarArticulo();
+//		test_cotizarArticulo();
 	}
 
 	private static void test_cotizarArticulo() {

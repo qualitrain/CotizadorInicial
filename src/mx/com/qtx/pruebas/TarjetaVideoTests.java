@@ -7,11 +7,9 @@ import mx.com.qtx.cotizador.TarjetaVideo;
 public class TarjetaVideoTests {
 
 	public static void main(String[] args) {
-		/*
 		test_crearTarjetaVideo();
 		test_cotizarTarjeta();
 		test_calcularPromocion3X2();
-		 */
 		test_cotizarArticulos();
 	}
 

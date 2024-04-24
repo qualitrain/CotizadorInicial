@@ -1,10 +1,10 @@
 package mx.com.qtx.cotizador;
 
 public class Articulo {
-	private String marca;
-	private String modelo;
-	private double costo;
-	private double precioBase;
+	protected String marca;
+	protected String modelo;
+	protected double costo;
+	protected double precioBase;
 	
 	public Articulo(String marca, String modelo, double costo, double precioBase) {
 		super();
@@ -12,6 +12,19 @@ public class Articulo {
 		this.modelo = modelo;
 		this.costo = costo;
 		this.precioBase = precioBase;
+	}
+	
+	public static Articulo crearArticulo(String tipo, String marca, String modelo, 
+			                             double costo, double precioBase, String memoria) {
+		switch(tipo) {
+		case "TarjetaVideo":
+			return new TarjetaVideo(marca,modelo,costo,precioBase,memoria);
+		case "Monitor":
+			return new Monitor(marca,modelo,costo,precioBase);
+		case "Generico":
+			return new Articulo(marca,modelo,costo,precioBase);
+		}
+		return null;
 	}
 
 	public String getMarca() {
