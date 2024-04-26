@@ -74,4 +74,8 @@ public class Articulo {
 		return importeCotizado;
 	}
 	
+	public String getTipo() {
+		return "Generico";
+	}
+	
 }

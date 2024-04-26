@@ -1,6 +1,7 @@
 package mx.com.qtx.pruebas;
 
 import mx.com.qtx.cotizador.Articulo;
+import mx.com.qtx.cotizador.Cotizacion;
 import mx.com.qtx.cotizador.Cotizador;
 
 public class CotizadorTests {
@@ -18,7 +19,8 @@ public class CotizadorTests {
 		cotizador.agregarArticulo(Articulo.crearArticulo("Generico","Mouse Genius","X-25",120,250,null,null), 10);
 		cotizador.agregarArticulo(Articulo.crearArticulo("DiscoDuro", "SeaGate", "Saturn", 1100, 2000, null, "1Tb"), 5);
 		
-		cotizador.emitirCotizacion();
+		Cotizacion cotizacion = cotizador.emitirCotizacion();
+		cotizacion.mostrar();
 	}
 
 }

@@ -30,5 +30,10 @@ public class TarjetaVideo extends Articulo {
 	public double cotizar(int cantidad) {
 		return this.calcularPromocion3X2(cantidad);
 	}
+	
+	@Override
+	public String getTipo() {
+		return "Tarjeta de Video";
+	}
 
 }

@@ -1,5 +1,6 @@
 package mx.com.qtx.cotizador;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Cotizador {
@@ -17,9 +18,9 @@ public class Cotizador {
 		this.lstCantidades.add(cantidad);
 	}
 	
-	public void emitirCotizacion() {
+	public void desplegarCotizacion() {
 		double total = 0;
-		System.out.printf(" Cant. %15s %10s %10s\n", "Articulo", "Precio", "Total");
+		System.out.printf(" Cant. %15s %20s %10s\n", "Articulo", "Precio", "Total");
 		for(int i=0; i<this.lstArticulos.size(); i++) {
 			Articulo artI = this.lstArticulos.get(i);
 			int cantI = this.lstCantidades.get(i);
@@ -27,13 +28,29 @@ public class Cotizador {
 			total += totArtCotizado;
 			
 			System.out.println(String.format("%5d ",cantI)
-					         + String.format("%-20s", artI.getMarca() + " " +artI.getModelo())
+					         + String.format("%-30s",artI.getTipo() + " " + artI.getMarca() + " " +artI.getModelo())
 					         + String.format(" %8.2f", artI.getPrecioBase())
 					         + String.format(" %10.2f", totArtCotizado)
 					         );
 		}
 		String cadTotal = String.format("%12.2f",total);
-		System.out.println(String.format("%46s", cadTotal));
+		System.out.println(String.format("%56s", cadTotal));
 	}
 	
+	public Cotizacion emitirCotizacion() {
+		double total = 0;
+		Cotizacion cotizacion = new Cotizacion();
+		cotizacion.setFecha(LocalDate.now());
+//		System.out.printf(" Cant. %15s %20s %10s\n", "Articulo", "Precio", "Total");
+		for(int i=0; i<this.lstArticulos.size(); i++) {
+			Articulo artI = this.lstArticulos.get(i);
+			int cantI = this.lstCantidades.get(i);
+			double totArtCotizado = artI.cotizar(cantI);
+			total += totArtCotizado;
+			
+			cotizacion.agregarDetalle(artI, cantI, totArtCotizado);
+		}
+		cotizacion.setTotal(total);
+		return cotizacion;
+	}
 }

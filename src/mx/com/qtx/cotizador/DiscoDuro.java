@@ -21,6 +21,9 @@ public class DiscoDuro extends Articulo {
 		return super.toString() + " " +
 				"DiscoDuro [almacenamiento=" + almacenamiento + "]";
 	}
-	
+	@Override
+	public String getTipo() {
+		return "Disco duro";
+	}
 
 }

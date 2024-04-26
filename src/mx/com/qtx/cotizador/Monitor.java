@@ -22,5 +22,8 @@ public class Monitor extends Articulo{
 		else
 			return super.cotizar(cantidad);
 	}
-
+	@Override
+	public String getTipo() {
+		return "Monitor";
+	}
 }
