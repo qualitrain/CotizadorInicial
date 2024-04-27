@@ -1,6 +1,6 @@
-package mx.com.qtx.cotizador;
+package mx.com.qtx.articulos;
 
-public class Monitor extends Articulo{
+public class Monitor extends Dispositivo{
 	public static final boolean PROMOCION_ACTIVA = true;
 
 	public Monitor(String marca, String modelo, double costo, double precioBase) {

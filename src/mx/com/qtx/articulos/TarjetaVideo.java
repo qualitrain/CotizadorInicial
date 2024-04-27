@@ -1,6 +1,6 @@
-package mx.com.qtx.cotizador;
+package mx.com.qtx.articulos;
 
-public class TarjetaVideo extends Articulo {
+public class TarjetaVideo extends Dispositivo {
 	private String memoria;
 
 	public TarjetaVideo(String marca, String modelo, double costo, double precioBase, String memoria) {

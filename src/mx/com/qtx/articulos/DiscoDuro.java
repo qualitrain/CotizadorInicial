@@ -1,6 +1,6 @@
-package mx.com.qtx.cotizador;
+package mx.com.qtx.articulos;
 
-public class DiscoDuro extends Articulo {
+public class DiscoDuro extends Dispositivo {
 	private String almacenamiento;
 
 	public DiscoDuro(String marca, String modelo, double costo, double precioBase, String almacenamiento) {

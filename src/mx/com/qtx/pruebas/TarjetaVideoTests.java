@@ -1,8 +1,8 @@
 package mx.com.qtx.pruebas;
 
-import mx.com.qtx.cotizador.Articulo;
-import mx.com.qtx.cotizador.Monitor;
-import mx.com.qtx.cotizador.TarjetaVideo;
+import mx.com.qtx.articulos.Articulo;
+import mx.com.qtx.articulos.Monitor;
+import mx.com.qtx.articulos.TarjetaVideo;
 
 public class TarjetaVideoTests {
 
@@ -36,7 +36,7 @@ public class TarjetaVideoTests {
 
 	private static void test_cotizarArticulos() {
 		Articulo[] arrArticulos = new Articulo[5];
-		arrArticulos[0] = new Articulo("SONY","W-56",1000,2000);
+		arrArticulos[0] = new Monitor("SONY","W-56",1000,2000);
 		arrArticulos[1] = new TarjetaVideo("Nvidia","Geforce",900,1800,"4Gb");
 		arrArticulos[2] = new TarjetaVideo("Nvidia","Geforce II",1000,2000,"6Gb");
 		arrArticulos[3] = new Monitor("Dell","Corsair",1500,3000);

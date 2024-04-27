@@ -1,6 +1,6 @@
 package mx.com.qtx.pruebas;
 
-import mx.com.qtx.cotizador.Articulo;
+import mx.com.qtx.articulos.Articulo;
 import mx.com.qtx.cotizador.Cotizacion;
 import mx.com.qtx.cotizador.Cotizador;
 

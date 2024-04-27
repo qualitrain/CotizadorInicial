@@ -3,6 +3,8 @@ package mx.com.qtx.cotizador;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import mx.com.qtx.articulos.Articulo;
+
 public class Cotizador {
 	private ArrayList<Articulo> lstArticulos;
 	private ArrayList<Integer> lstCantidades;

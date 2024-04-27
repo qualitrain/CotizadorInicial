@@ -1,6 +1,6 @@
-package mx.com.qtx.cotizador;
+package mx.com.qtx.articulos;
 
-public class Articulo {
+public abstract class Articulo {
 	protected String marca;
 	protected String modelo;
 	protected double costo;
@@ -25,8 +25,6 @@ public class Articulo {
 			return new Monitor(marca,modelo,costo,precioBase);
 		case "DiscoDuro":
 			return new DiscoDuro(marca,modelo,costo,precioBase,almacenamiento);
-		case "Generico":
-			return new Articulo(marca,modelo,costo,precioBase);
 		}
 		return null;
 	}
@@ -74,8 +72,6 @@ public class Articulo {
 		return importeCotizado;
 	}
 	
-	public String getTipo() {
-		return "Generico";
-	}
+	public abstract String getTipo();
 	
 }

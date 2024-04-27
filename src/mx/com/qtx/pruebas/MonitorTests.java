@@ -1,7 +1,7 @@
 package mx.com.qtx.pruebas;
 
-import mx.com.qtx.cotizador.Articulo;
-import mx.com.qtx.cotizador.Monitor;
+import mx.com.qtx.articulos.Articulo;
+import mx.com.qtx.articulos.Monitor;
 
 public class MonitorTests {
 

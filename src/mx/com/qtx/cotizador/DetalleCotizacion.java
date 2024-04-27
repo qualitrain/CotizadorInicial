@@ -1,5 +1,7 @@
 package mx.com.qtx.cotizador;
 
+import mx.com.qtx.articulos.Articulo;
+
 public class DetalleCotizacion {
 	private int numDetalle;
 	private int cantidad;
