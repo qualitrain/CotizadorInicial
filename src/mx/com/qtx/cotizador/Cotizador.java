@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import mx.com.qtx.articulos.Articulo;
 
-public class Cotizador {
+public class Cotizador implements ICotizador {
 	private ArrayList<Articulo> lstArticulos;
 	private ArrayList<Integer> lstCantidades;
 
@@ -54,5 +54,16 @@ public class Cotizador {
 		}
 		cotizacion.setTotal(total);
 		return cotizacion;
+	}
+
+	@Override
+	public void eliminarArticulo(Articulo artI) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getIdCotizador() {
+		return this.getClass().getName();
 	}
 }
